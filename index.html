@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home::</title>
+    <link href="./index.css" rel="stylesheet">
+	<!--<script src="./ChangeELMT.js"></script>-->
+	<script>
+        var gal=["https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+"https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"];
+let i=0;        
+/*function glr()
+        {
+            
+            document.getElementById("prev").src=gal[i];
+            i++;
+        }
+  */      
+	function tm()
+	{
+	var d=new Date();
+	var h=d.getHours();
+	var m=d.getMinutes();
+	var s=d.getSeconds();
+	var ms="am";
+	if(h>=12 && h<24)
+		ms="pm";
+	document.getElementById("t").innerHTML=+h%12+":"+m+":"+s+ms;
+	}
+	setInterval(tm,1);
+    setInterval(glr,2000);
+        glr();
+	tm();
+	window.addEventListener("resize",function(){alert("This website is compaitable with Full Screen Mode !")});
+	</script>
+</head>
+<body>
+    <header>
+        <img class="h_logo"src="./resources/photos/head_photo.jpg" >
+    </header>
+    <nav>
+        <table class="nav_table">
+            <tr>
+                
+                <td><a href="#" class="nav_a">HOME</td>
+                <td><a href="#" class="nav_a">ACTIVITIES</td>
+                <td><a href="#" class="nav_a">ACADEMICS</td>
+                <td><a href="#" class="nav_a">ADMISSIONS</td>
+                <td><a href="#" class="nav_a">RESULTS</td>
+                <td><a href="#" class="nav_a">ABOUT US</td>
+            </tr>
+        </table>        
+    </nav>
+    
+    <article>
+	
+        <table class="anthem">
+            <tr>
+                <td><audio controls src="resources/audio/Jana_gana_mana_vocal.ogg.mp3">
+                        Your browser does not support the
+                        audio element.
+                </audio></td>
+                <td><marquee id="antm" scrolldelay="1" scrollamount="3">জনগণমন-অধিনায়ক জয় হে ভারতভাগ্যবিধাতা!
+                    পঞ্জাব সিন্ধু গুজরাট মরাঠা দ্রাবিড় উৎকল বঙ্গ
+                    বিন্ধ্য হিমাচল যমুনা গঙ্গা উচ্ছলজলধিতরঙ্গ
+                    তব শুভ নামে জাগে, তব শুভ আশিষ মাগে,
+                    গাহে তব জয়গাথা।
+                    জনগণমঙ্গলদায়ক জয় হে ভারতভাগ্যবিধাতা!
+                    জয় হে, জয় হে, জয় হে, জয় জয় জয় জয় হে॥</marquee></td>
+				<td id="t"><p>Loading...</p></td>	
+            <tr>
+        </table> 
+			
+        
+            
+        <form action="#">
+            <select id="school" name="school"><option id="teacher" value="teacher" >Teacher</option><option value="student" >Student</option></select><label for="school">ID: </label><input type="text"><label>Password: </label><input type="password"><button >Login</button>
+        </form>
+        <table class="main_t">
+        <tr>
+            <td><div>
+                <table class="external">
+                    <caption>External Links</caption>
+                    <tr>
+            
+                        <td>
+                    <ul class="list_style">
+                        <li><a class="ext_a" href="https://wbscc.wb.gov.in" target="_blank"> Student Credit Card Scheme</li>
+                        <li><a class="ext_a" href="https://oasis.gov.in/" target="_blank"> OASIS Scholarship Portal</li>
+                        <li><a class="ext_a" href="https://www.wbkanyashree.gov.in/"> Kanyashree Scheme</li>
+                        <li><a class="ext_a" href="https://wb.gov.in/government-schemes-details-shikshashree.aspx"> Shikshashree Scheme</li>
+                    </ul>
+                </td>
+                    </tr>
+                </table>  </div>          
+            </td>
+            <td style="margin-left: auto; margin-right: auto;" id="pre">   
+                <img id="prev" src="./resources/photos/sport.jpg">   
+				<!-- <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            
+            </td>
+            <td><div>
+                <table class="notices">
+                    <caption>Notices</caption>
+                    <tr>
+                        <td>
+                            <marquee behavior="scroll" direction="up" scrollamount="1" scrolldelay="1"><a href="#" class="notice_a"><hr/>Class IX Form Fill-up has started from 03.09.2021.<hr/></markquee>
+                                
+                        </td>
+                        
+                    </tr>    
+                </table></div>
+            
+            </td>
+        </tr>
+    </table>    
+    
+    </article>
+ 
+    <footer>
+        <b>&copy;2023 All rights reserved &bull; Dakshin Khayer Bari High School, Jalpaiguri</b><p>Developed by: <a target="_blank" href="https://www.linkedin.com/in/nityananda00/">Nityananda Adhikary<p id="last">Thurday 19 Aug, 2023</p></p>
+    </footer>    
+</body>
+</html>
